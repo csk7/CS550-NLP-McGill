@@ -10,7 +10,7 @@ from my_lstm_file import LSTM
 class RNNModel(nn.Module):
     """Container module with an encoder, a recurrent module, and a decoder."""
 
-    def __init__(self, rnn_type, ntoken, ninp, nhid, nlayers, dropout=0.5, dropouth=0.5, dropouti=0.5, dropoute=0.1, wdrop=0, tie_weights=False):
+    def __init__(self, rnn_type, tokens, ntoken, ninp, nhid, nlayers, dropout=0.5, dropouth=0.5, dropouti=0.5, dropoute=0.1, wdrop=0, tie_weights=False):
         super(RNNModel, self).__init__()
         self.lockdrop = LockedDropout()
         self.idrop = nn.Dropout(dropouti)
@@ -49,7 +49,7 @@ class RNNModel(nn.Module):
             #    raise ValueError('When using the tied flag, nhid must be equal to emsize')
             self.decoder.weight = self.encoder.weight
 
-        self.init_weights()
+        self.init_weights(tokens, ntoken, ninp)
 
         self.rnn_type = rnn_type
         self.ninp = ninp
@@ -64,9 +64,27 @@ class RNNModel(nn.Module):
     def reset(self):
         if self.rnn_type == 'QRNN': [r.reset() for r in self.rnns]
 
-    def init_weights(self):
+    def init_weights(self, tokens, ntoken, ninp):
         initrange = 0.1
-        self.encoder.weight.data.uniform_(-initrange, initrange)
+
+        # Load pretrained embeddings
+        embedding = None
+        if embedding:
+            if embedding == 'word2vec':
+                word_model = gensim.models.KeyedVectors.load_word2vec_format('data/embeddings/GoogleNews-vectors-negative300.bin', binary=True)
+            elif embedding == 'fasttext':
+                word_model = gensim.models.wrappers.FastText.load_fasttext_format('data/embeddings/wiki.en')
+
+            weights_matrix = np.zeros((ntoken, ninp))
+            for i, word in enumerate(tokens.idx2word):
+                try:
+                    weights_matrix[i] = word_model[word]
+                except KeyError:
+                    weights_matrix[i] = np.random.normal(scale=initrange, size=(ninp))
+            self.encoder.weight.data.copy_(torch.from_numpy(weights_matrix))
+        else:
+            self.encoder.weight.data.uniform_(-initrange, initrange)
+
         self.decoder.bias.data.fill_(0)
         self.decoder.weight.data.uniform_(-initrange, initrange)
 
