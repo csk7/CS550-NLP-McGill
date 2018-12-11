@@ -7,7 +7,7 @@ A copy of the report is also added to this repository.
 The data can be downloaded from the link below:
 [Data](https://drive.google.com/open?id=1r81bVka_ZZj7RXP3AmBCY9p8Fiz-zpKa)
 
-The corpus data2 folder should be added in the main directory.
+The data2 folder should be added in the main directory.
 
 ## General requirements
 
