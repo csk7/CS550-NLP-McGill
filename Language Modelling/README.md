@@ -19,7 +19,7 @@ CuDNN, Pytorch 0.4
 For Q-LSTM 4 - bits
 
 ```
-python main.py --epochs 200 --data data/wikitext-2 --dropouth 0 --wdrop 0 --seed 1882
+python main.py --epochs 20 --data data/wikitext-2 --dropouth 0 --wdrop 0 --seed 1882
 
 ```
 
