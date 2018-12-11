@@ -1,6 +1,8 @@
 import torch
 import torch.nn as nn
 import lnrnn
+import numpy as np
+import gensim
 
 from embed_regularize import embedded_dropout
 from locked_dropout import LockedDropout
