@@ -11,11 +11,11 @@ The corpus data2 folder should be added in the main directory.
 
 ## General requirements
 
-CUDA enabled GPU
-CuDNN, Pytorch 0.4 
-six
-tqdm
-configargparse
+CUDA enabled GPU,
+CuDNN, Pytorch 0.4, 
+six,
+tqdm,
+configargparse,
 
 ## Commands to Run
 
