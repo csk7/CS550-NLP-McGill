@@ -16,6 +16,6 @@ The data for both the tasks can be downloaded from the link below:
 
 ## References
 
-For language modelling, we built our code on top of the vanilla (32-bit floating point) LSTM implementation  included  in  Salesforce’s  LSTM  Language  Model  Toolkit    [Merity et al.,2017](https://github.com/salesforce/awd-lstm-lm) (BSD-3 License).    
-For neural machine translation, our code is similarly built on top of the vanilla LSTM implementation of OpenNMT  [Klein et al.,2017](https://github.com/OpenNMT/OpenNMT-py). (MIT License)
-
+ + For language modelling, we built our code on top of the vanilla (32-bit floating point) LSTM implementation  included  in  Salesforce’s  LSTM  Language  Model  Toolkit    [Merity et al.,2017](https://github.com/salesforce/awd-lstm-lm) (BSD-3 License).    
+ + For neural machine translation, our code is similarly built on top of the vanilla LSTM implementation of OpenNMT  [Klein et al.,2017](https://github.com/OpenNMT/OpenNMT-py). (MIT License)
++ [PyTorch](https://github.com/pytorch/pytorch)
