@@ -10,7 +10,7 @@ The data for both the tasks can be downloaded from the link below:
 
 ## General requirements
 
-+ [ ] CUDA enabled GPU
++ [X] CUDA enabled GPU
 + [ ] CuDNN, Pytorch 0.4 
 
 ## References
