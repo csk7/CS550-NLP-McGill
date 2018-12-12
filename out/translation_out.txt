@@ -1,0 +1,10 @@
+[2018-12-11 16:55:46,515 INFO] Step 4900/ 5000; acc:  83.73; ppl:  1.95; xent: 0.67; lr: 1.00000; 5183/5413 tok/s;    819 sec
+[2018-12-11 16:55:54,865 INFO] Step 4950/ 5000; acc:  83.38; ppl:  2.02; xent: 0.71; lr: 1.00000; 5091/5318 tok/s;    827 sec
+[2018-12-11 16:56:02,615 INFO] Loading train dataset from data2/multi30k.atok.low.train.0.pt, number of examples: 29000
+[2018-12-11 16:56:03,664 INFO] Step 5000/ 5000; acc:  83.61; ppl:  1.97; xent: 0.68; lr: 1.00000; 4758/4940 tok/s;    836 sec
+[2018-12-11 16:56:03,664 INFO] Saving checkpoint multi30k_model_step_5000.pt
+[2018-12-11 16:56:05,176 INFO] Loading train dataset from data2/multi30k.atok.low.train.0.pt, number of examples: 29000
+
+(pytorch_04) siva@siva:~/NLP/W3/OpenNMT/OpenNMT-py$ perl tools/multi-bleu.perl data2/multi30k/test2016.de.atok < multi30k.test.pred.atok
+BLEU = 25.60, 57.7/31.6/20.0/12.7 (BP=0.981, ratio=0.981, hyp_len=12012, ref_len=12242)
+

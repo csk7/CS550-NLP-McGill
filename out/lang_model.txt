@@ -1,0 +1,25 @@
+-----------------------------------------------------------------------------------------
+| end of epoch  18 | time: 148.67s | valid loss  5.08 | valid ppl   160.78 | valid bpc    7.329
+-----------------------------------------------------------------------------------------
+Saving model (new best validation)
+| epoch  19 |   200/  880 batches | lr 40.00000 | ms/batch 147.89 | loss  4.86 | ppl   128.58 | bpc    7.007
+| epoch  19 |   400/  880 batches | lr 40.00000 | ms/batch 147.07 | loss  4.91 | ppl   135.75 | bpc    7.085
+| epoch  19 |   600/  880 batches | lr 40.00000 | ms/batch 148.13 | loss  4.94 | ppl   139.69 | bpc    7.126
+| epoch  19 |   800/  880 batches | lr 40.00000 | ms/batch 148.77 | loss  4.86 | ppl   129.19 | bpc    7.013
+-----------------------------------------------------------------------------------------
+| end of epoch  19 | time: 148.60s | valid loss  5.06 | valid ppl   157.84 | valid bpc    7.302
+-----------------------------------------------------------------------------------------
+Saving model (new best validation)
+| epoch  20 |   200/  880 batches | lr 40.00000 | ms/batch 150.61 | loss  4.84 | ppl   126.72 | bpc    6.985
+| epoch  20 |   400/  880 batches | lr 40.00000 | ms/batch 149.10 | loss  4.88 | ppl   131.48 | bpc    7.039
+| epoch  20 |   600/  880 batches | lr 40.00000 | ms/batch 148.66 | loss  4.92 | ppl   137.48 | bpc    7.103
+| epoch  20 |   800/  880 batches | lr 40.00000 | ms/batch 149.81 | loss  4.85 | ppl   127.21 | bpc    6.991
+-----------------------------------------------------------------------------------------
+| end of epoch  20 | time: 148.49s | valid loss  5.09 | valid ppl   161.71 | valid bpc    7.337
+-----------------------------------------------------------------------------------------
+/home/siva/NLP/W2/Wed_Salesforce/awd-lstm-lm-master/model.py:83: UserWarning: RNN module weights are not part of single contiguous chunk of memory. This means they need to be compacted at every call, possibly greatly increasing memory usage. To compact weights again call flatten_parameters().
+  raw_output, new_h = rnn(raw_output, hidden[l])
+=========================================================================================
+| End of training | test loss  5.00 | test ppl   147.90 | test bpc    7.209
+=========================================================================================
+
